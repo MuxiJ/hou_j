@@ -1,2 +1,5 @@
 # hou_j
-A C++ learning pkg of a workspace based on ros-kinetic
+
+Some practice of constructor.
+For more information:
+https://www.bilibili.com/video/av19038490
