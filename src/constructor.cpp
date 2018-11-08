@@ -54,9 +54,14 @@ int main(int argc, char** argv)
 
     cout << "---c1:---" << endl;
     Complex c1; cout << c1 << endl;//调用构造函数(非默认)
+    //创建对象c1时无参数
 
     cout << "\n---c2:---" << endl;
-    Complex c2(2,2); cout << c2 << endl;//用临时对象(1，2)初始化构造函数的形参给c2
+    Complex c2(6,2); cout << c2 << endl;
+    //创建对象c2时有参数，调用构造函数Complex，将参数传递给它
+
+    cout << "\n---c22:---" << endl;
+    cout << Complex(1,2) << endl;//类名()  没有名字的临时对象
 
     cout << "\n---c3:---" << endl;
     Complex c3(4); cout << c3 << endl;//默认实参填补了0
@@ -71,11 +76,12 @@ int main(int argc, char** argv)
     Complex c5(c2); cout << c5 << endl;
 
     cout << "\n---c6:---" << endl;
-    Complex c6 = c2; cout << c6 << endl;//此=不是调用拷贝赋值运算符
+    Complex c6 = c2; cout << c6 << endl;//此=不是调用拷贝赋值运算符，而是拷贝构造函数
 
     cout << "\n---c7:---" << endl;
     Complex c7; c7 = c2; cout << c7 << endl;//拷贝赋值运算符
-
+//c5、c6、c7:c5与c6一回事。c6与c7有了Complex是构造，没则是赋值。
+    
     cout << "\n---c2 + c2 + c2:---" << endl;
     c2 + c2 + c2; cout << c2 << endl;
     
